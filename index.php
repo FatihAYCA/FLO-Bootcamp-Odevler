@@ -1,9 +1,9 @@
 <?php
 
-$agilsayisi = 3;  // Çiftlikteki ağıl sayısı
-$agilmax = 45;  // Ağılın alabildiği max. koyun sayısı
-$toplamkoyun = 137;  // Çiftlikteki toplam koyun sayısı
-$toplamkapasite = $agilmax * $agilsayisi; // Çiftliğin toplam kapasitesi
+$agilsayisi = 3;  // Çiftlikteki ağıl sayısı.
+$agilmax = 45;  // Ağılın alabildiği max. koyun sayısı.
+$toplamkoyun = 137;  // Çiftlikteki toplam koyun sayısı.
+$toplamkapasite = $agilmax * $agilsayisi; // Çiftliğin toplam kapasitesi.
 $toplam = $toplamkoyun; // for döngüsünde toplam koyun sayısıyla işlem yaptığım için for döngüsünün dışında toplam koyunu tekrar değişkene atadım.
 
 echo "Toplam Ağıl : $agilsayisi <br>";
