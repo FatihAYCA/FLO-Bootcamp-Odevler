@@ -11,6 +11,6 @@
 
     4) 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. hanelerin toplamının 10ʹa göre modu 11. haneye eşittir.
     
-    
+
 ![odev4](https://user-images.githubusercontent.com/110502174/203184318-5eda72b0-6c7a-4c55-ae8d-d194f9a90aa3.gif)
 
