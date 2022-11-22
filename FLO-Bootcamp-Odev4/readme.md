@@ -1,7 +1,7 @@
 
-FLO - Bootcamp Ödev - 4
+#FLO - Bootcamp Ödev - 4
 
-- Formdan gelen verileri aşağıdaki kurallara göre bir Class içerisinde doğruladım ve veritabanına kaydedip listeledim.
+##- Formdan gelen verileri aşağıdaki kurallara göre bir Class içerisinde doğruladım ve veritabanına kaydedip listeledim.
 
     1 ) TC kimlik numaraları 11 hanelidir ve her hanesi rakamsal değerdedir.
     
@@ -13,3 +13,4 @@ FLO - Bootcamp Ödev - 4
     
     
 ![odev4](https://user-images.githubusercontent.com/110502174/203184318-5eda72b0-6c7a-4c55-ae8d-d194f9a90aa3.gif)
+
