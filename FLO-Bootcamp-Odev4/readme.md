@@ -1,7 +1,7 @@
 
-#FLO - Bootcamp Ödev - 4
+# FLO - Bootcamp Ödev - 4
 
-##- Formdan gelen verileri aşağıdaki kurallara göre bir Class içerisinde doğruladım ve veritabanına kaydedip listeledim.
+## - Formdan gelen verileri aşağıdaki kurallara göre bir Class içerisinde doğruladım ve veritabanına kaydedip listeledim.
 
     1 ) TC kimlik numaraları 11 hanelidir ve her hanesi rakamsal değerdedir.
     
