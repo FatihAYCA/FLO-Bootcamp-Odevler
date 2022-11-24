@@ -13,40 +13,41 @@
 
 <?php
 
-$baglan = new PDO("mysql:host=localhost;dbname=rehber;charset=utf8","fatih","1234");
+require_once 'baglan.php';
+$baglan = baglan();
 
-$sorgu = $baglan->query("select * from rehber1", PDO::FETCH_ASSOC);
+$sorgu = $baglan->prepare("select * from rehber1");
+$sorgu->execute();
+$sorgusayac = $sorgu->rowCount();
 
-$toplamsatir = $sorgu->rowCount(); //TOPLAM KAYDIMI SAYDIRDIM-TABLONUN EN ALTINDA KULLANACAĞIM
 
+var_dump($toplamsatir);
 echo "<table width='100%' border='1'>
-<tr align='center'>
-<td width = '55%'><b>Adı Soyadı</b></td>
-<td width = '35%'><b>Telefon Numarası</b></td>
-<td width = '10%'><b>İşlem</b></td>
-</tr>";
+    <tr align='center'>
+        <td width = '55%'><b>Adı Soyadı</b></td>
+        <td width = '35%'><b>Telefon Numarası</b></td>
+        <td width = '10%'><b>İşlem</b></td>
+    </tr>";
 
-//VERİTABANINDAN VERİLERİMİ ÇEKTİM-TABLODA GEREKLİ SÜTUNLARA YAZDIRDIM-SİL BUTONUYLA ADRES ÇUBUĞUNA ID NO VERİSİNİ GÖNDERDİM
+//Veritabanından verilerimi çektim-Tabloda gerekli sütunlara yazdırdım-A href kullanarak adres çubuğuna id no gönderdim
 while ($satir = $sorgu->fetchObject()){
     echo "<tr align='center'>
-    <td>$satir->adsoyad </td>
-    <td>$satir->telefon </td>
-    <td><a href='sil.php?id=$satir->id'>Sil</a></td> 
-    </tr>";
+            <td>$satir->adsoyad </td>
+            <td>$satir->telefon </td>
+            <td><a href='sil.php?id=$satir->id'>Sil</a></td> 
+          </tr>";
 }
 
-//EĞER KAYIT LİSTEMDE VERİ YOKSA VERİ OLMADIĞINI BELİRTMEK AMACIYLA KONTROL YAPTIRDIM-VERİ YOKSA EKRANDA BELİRTTİM.
 if ($toplamsatir > 0) {
     echo "<tr align='center'>
-<td colspan='3'><b>Sistemde Toplam -$toplamsatir- Kayıt Var.</b></td>
-</tr>";
-
-}else {
-    echo "<tr align='center'>
-<td colspan='3'><b>Sistemde Kayıtlı Veri Yok!</b></td>
-</tr>";
+            <td colspan='3'><b>Sistemde Toplam -$toplamsatir- Kayıt Var.</b></td>
+          </tr>";
 }
-
+else {
+    echo "<tr align='center'>
+            <td colspan='3'><b>Sistemde Kayıtlı Veri Yok!</b></td>
+          </tr>";
+}
 echo "</table>";
 ?>
 

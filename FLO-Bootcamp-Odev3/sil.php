@@ -1,10 +1,11 @@
 <?php
-$baglan = new PDO("mysql:host=localhost;dbname=rehber;charset=utf8","fatih","1234");
+require_once 'baglan.php';
+$baglan = baglan();
 
-$silme = $_GET["id"];  //ADRES ÇUBUĞUNDAN SİLİNECEK KAYDIN ID NOSUNU ALDIM
+$silme = $_GET["id"];  //Adres çubuğundan silinecek kaydın ID No'sunu aldım
 
 $sorgu = $baglan->prepare("delete from rehber1 where id=?");
-$sil = $sorgu->execute(array($silme));  //ADRES ÇUBUĞUNDAN GELEN ID NOLU SATIRI VERİTABANINDAN SİLDİM
+$sil = $sorgu->execute(array($silme));  //Adres çubuğundan gelen ID No'lu satırı sildim
 
-header('Location: liste.php'); //LİSTE.PHP ADRESİNE GERİ DÖNDÜM
+header('Location: liste.php'); 
 ?>

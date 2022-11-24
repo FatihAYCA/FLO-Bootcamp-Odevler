@@ -12,7 +12,7 @@
      <input type="text" name="adsoyad" value="" size="30" required>
     <br><br>
     <strong>TC Kimlik Numarası:</strong> <br>
-    <input type="tel" name="tc" value="" size="30" required>
+    <input type="value" name="tc" value="" size="30" required>
     <br><br>
     <input type='submit' style=' text-align:center; font-size:medium ; color:aliceblue ; background-color: #4472C4; border: 0.5pt ridge #101B2E; float: center;' value='Doğrula ve Kaydet'>
 </form>

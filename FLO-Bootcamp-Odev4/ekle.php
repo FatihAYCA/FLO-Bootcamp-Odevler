@@ -11,5 +11,5 @@ $sondurum = $durum->islem1($tc);
 
 $sorgu = $baglan->prepare('insert into dogrula values(?,?,?,?)');
 $ekle = $sorgu->execute(array(NULL,"$adsoyad","$tc","$sondurum"));
-header('location:index.php')
+header('location:index.php');
 ?>
