@@ -8,7 +8,7 @@
 </head>
 <body >
 <div style="text-align:center;">
-            <a href="index.php">Fiyat Güncelleme</a> - <a href="fatura.php">FATURA</a> 
+
 </div>
 
 <h2 style='text-align:center'>** Ot Master v1.0 **</h2>
@@ -25,16 +25,16 @@ $otlar[] = "Reyhan";
 
 echo "<form action='hesap.php' method='post' style='text-align:center;'>
 
-<table style='border:1px solid black; margin-left:auto;margin-right:auto;'>
+<table border='1' style='border:1px solid black; margin-left:auto;margin-right:auto;'>
     <tr>
-        <td width='35%'>Ot Türü</td>
-        <td width='35%'>Fiyat(1KG)</td>
+        <td width='55%'><b>Ot Türü</b></td>
+        <td width='25%'><b>Fiyat(1KG)</b></td>
     </tr>";
     $sayac = 0;
 foreach ($otlar as $ot ) {
     echo "<tr>
             <td>$ot</td>
-            <td><input type='value' size='1' name='fiyat$sayac'></td>
+            <td><input type='number' size='1' name='fiyat$sayac' style='text-align:center' required></td>
         </tr>";
         $sayac++;
 }

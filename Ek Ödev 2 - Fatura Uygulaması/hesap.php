@@ -3,11 +3,10 @@ session_start();
 $fiyat = array();
 for ($i=0; $i < 4; $i++) {
     $fiyat[$i] = $_POST["fiyat$i"];
-    $_SESSION["fiyat$i"] = $fiyat["$i"];
+    $_SESSION["fiyat"][$i] = $fiyat["$i"];
 }
-var_dump($_SESSION);
-$fatih = $_SESSION["fiyat0"];
-echo $fatih;
-
-header('location:fatura.php');
+$miktar = $_POST["miktar"];
+$urun = $_POST["urun"];
+$tazelik = $_POST["tazelik"];
+header('location:verigiris.php');
 ?>

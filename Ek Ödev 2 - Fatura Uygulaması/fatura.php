@@ -8,82 +8,68 @@
 </head>
 <body >
 <div style="text-align:center;">
-<a href="index.php">Fiyat Güncelleme</a> - <a href="fatura.php">FATURA</a> 
+<a href="index.php">Fiyat Güncelleme</a> - <a href="verigiris.php">Ürün Değiştir</a>
 </div>
-
-<h2 style='text-align:center'>Ot Fiyatlarını Giriniz (1KG)</h2>
+<h2 style='text-align:center'>** Ot Master v1.0 **</h2>
+<h2 style='text-align:center'>******</h2>
 
 <?php
 session_start();
-error_reporting(0);
-$otlar = array();
-$otlar[] = "Kekik";
-$otlar[] = "Nane";
-$otlar[] = "Fesleğen";
-$otlar[] = "Reyhan";
+//Fonksiyonlarımı farklı bir sayfada tanımlayıp buraya include ettim.
+include 'fonksiyon.php';
 
-$price = array();
-for ($i=0; $i < 4; $i++) { 
-    $price[$i] = $_SESSION["fiyat$i"];
-}
+//Faturada kullanacağım değişkenleri tanımladım, gerekli işlemleri yaptım.
+$miktar = $_POST["miktar"];
+$urun = $_POST["urun"];
+$_SESSION["secilenurun"] = $urun;
+$tazelik = $_POST["tazelik"];
+$birimfiyat = otBirimFiyat($urun);
+$guncelfiyat = tazelikEtkisi($urun,$birimfiyat);
+$toplam = $birimfiyat * $miktar;
+$gunceltoplam = ($guncelfiyat - $birimfiyat) * $miktar;
+$tutar = $guncelfiyat * $miktar;
+$kdv = $tutar * 18 / 100;
+$geneltoplam = $kdv + $tutar;
 
-echo "<form action='deneme.php' method='post' style='text-align:center;'>
-    <table border='1' style='border:2px solid black;borderline:1px; margin-left:auto;margin-right:auto;'>
-    <tr>
-        <td width='35%'><b>Ot Türü</b></td>
-        <td width='20%'><b>Fiyat (1KG)</b></td>
-        <td width='15%'><b>Kg Giriniz (Taze)</b></td>
-        <td width='15%'><b>Kg Giriniz (Taze Değil)</b></td>
-    </tr>";
+//Faturamı yazdırdım.
+echo "<table border='1' style='border:3px solid black;borderline:1px; margin-left:auto;margin-right:auto;'>
+<tr>
+    <td style='text-transform:capitalize' width='45%'><b>Tür</b></td>
+    <td style='text-transform:capitalize' width='25%'><b>$urun</b></td>
+</tr>
+<tr>
+    <td style='text-transform:capitalize' width='45%'><b>$urun Miktar (Kg)</b></td>
+    <td style='text-transform:capitalize' width='25%'><b>$miktar Kg</b></td>
+</tr>
+<tr>
+    <td style='text-transform:capitalize' width='45%'><b>Tazelik</b></td>
+    <td style='text-transform:capitalize' width='25%'><b>$tazelik</b></td>
+</tr>
+<tr>
+    <td style='text-transform:capitalize' width='45%'><b>İşlem Tutarı</b></td>
+    <td style='text-transform:capitalize' width='25%'><b>$toplam TL</b></td>
+</tr>
+<tr>
+    <td style='text-transform:capitalize' width='45%'><b>Tazelik Etkisi</b></td>
+    <td style='text-transform:capitalize' width='25%'><b>$gunceltoplam TL</b></td>
+</tr>
+<tr>
+    <td style='text-transform:capitalize' width='45%'><b>Tutar</b></td>
+    <td style='text-transform:capitalize' width='25%'><b>$tutar TL</b></td>
+</tr>
+<tr>
+    <td style='text-transform:capitalize' width='45%'><b>KDV (18%)</b></td>
+    <td style='text-transform:capitalize' width='25%'><b>$kdv TL</b></td>
+</tr>
+</table>";
 
-    for ($i=0; $i < 4; $i++) { 
-        echo "<tr>
-        <td width='25%'>$otlar[$i]</td>
-        <td width='25%''>$price[$i]</td>
-        <td><input type='text' name='tazeurunkg$i'size ='1'  style='text-align:center'></input></td>
-        <td><input type='text' name='urunkg$i'size ='1'  style='text-align:center'></input></td>
-        </tr>";
-    }
-echo "</table><input type='submit' style=' text-align:center; font-size:medium ; color:aliceblue ; background-color: #4472C4; border: 0.5pt ridge #101B2E; float: center;' value='Bilgileri Kaydet'></form><br><br>";
-
-
-//Ot Türünü Kullanıcıdan İstedim
-// echo "<form method='POST' action='fatura.php'>Ürün Seçiniz:
-//     <select name='urun'>";
-// for ($i=0; $i < 4; $i++) { 
-//     echo "
-//     <option value='$otlar[$i]'>$otlar[$i]</option>";
-// }
-
-// echo "</select><input type='submit'></form>";
-// $urun = $_POST["urun"];
-// $_SESSION["secilenurun"] = $urun;
-// echo "<form method='POST' action='fatura.php'>Tazelik Durumu:
-//     <select name='tazelik'>
-//     <option value='taze'>Taze</option>
-//     <option value='degil'>Taze Değil</option>
-// </select><input type='submit'></form>";
-// $tazelik = $_POST["tazelik"];
-
-
-//     echo "<form method='POST' action=''>Ürün Seçiniz:
-//         <select name='urun'>";
-//     for ($i=0; $i < 4; $i++) { 
-//         echo "
-//         <option value='$otlar[$i]'>$otlar[$i]</option>";
-//     }
-//     echo "</select><input type='submit'></form>";
-//     $_SESSION["secilenurun"] = $_POST["urun"];
-
-//     echo "<form method='POST' action='' name='tazelik'>Tazelik Durumu:
-//         <select name='tazelik'>
-//         <option value='taze'>Taze</option>
-//         <option value='degil'>Taze Değil</option>
-//     </select><input type='submit'></form>";
-//     $_SESSION["tazelikdurum"] = $_POST["tazelik"];
-
-// var_dump($_SESSION);
-// echo $secilen;
+echo "<h2 style='text-align:center'>******</h2>";
+echo "<h2 style='text-align:center'>FATURA</h2>";
+echo "<p style='text-align:center'>OT A.Ş. <br>
+* $urun: $miktar KG x $guncelfiyat TL = $tutar <br>
+$tazelik .<br>
+KDV (18%) = $kdv TL <br>
+Genel Toplam: $geneltoplam TL</p>"
 ?>
 
 </body>
