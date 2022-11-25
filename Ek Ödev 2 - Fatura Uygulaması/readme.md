@@ -8,3 +8,4 @@
 ### 3 - Elde ettiğim bilgilerle birlikte fatura çıktısı oluşturdum.
 
 
+![faturauygulama](https://user-images.githubusercontent.com/110502174/204020004-916b3834-6268-4874-a087-a8e6c6519260.gif)
