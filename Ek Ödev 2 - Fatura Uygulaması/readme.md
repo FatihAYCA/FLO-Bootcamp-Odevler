@@ -1,5 +1,5 @@
 
-# FLO - Bootcamp Ek Ödev 2 - (FATURA UYGULAMASI - OT MASTER V1.0) 
+## FLO - Bootcamp Ek Ödev 2 - (FATURA UYGULAMASI - OT MASTER V1.0) 
 
 ## Bu ödevde fonksiyonları kullanarak kullanıcıdan gelen verilere göre bir fatura oluşturdum.
 
