@@ -10,9 +10,9 @@ function otBirimFiyat($a) {
         } elseif ($a == 'Reyhan') {
             return $_SESSION['fiyat'][3];
         }
-    }
+}
 
-    function tazelikEtkisi($a,$b) {
+function tazelikEtkisi($a,$b) {
         if ($a == 'Kekik') {
             if ($_POST['tazelik'] == 'Taze') {
                 return $b;
@@ -38,6 +38,6 @@ function otBirimFiyat($a) {
                 return ($b * 75 / 100);
             }
         }
-    }
+}
 
 ?>

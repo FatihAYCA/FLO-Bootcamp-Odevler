@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +7,13 @@
     <title>** Ot Master v1.0 **</title>
 </head>
 <body >
-<div style="text-align:center;">
-
-</div>
 
 <h2 style='text-align:center'>** Ot Master v1.0 **</h2>
 <h3 style='text-align:center'>Ot Fiyatlarını Giriniz (1KG)</h3>
 
-
 <?php
 session_start();
+
 $otlar = array();
 $otlar[] = "Kekik";
 $otlar[] = "Nane";
@@ -40,11 +37,7 @@ foreach ($otlar as $ot ) {
 }
 echo "</table><br>
 <input type='submit' style='font-size:medium; margin-left:auto; margin-right:auto;' value='Fiyatları Kaydet'></form>";
-
-
-
 ?>
-
 
 </body>
 </html>

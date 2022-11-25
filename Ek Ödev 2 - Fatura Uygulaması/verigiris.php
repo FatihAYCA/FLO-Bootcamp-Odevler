@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -50,7 +50,8 @@ echo "</table><br>
         </select>
         <select name='tazelik' style='font-size:20px;'>
         <option value='Taze'>Taze</option>
-        <option value='Taze değil'>Taze Değil</option></select>
+        <option value='Taze değil'>Taze Değil</option>
+        </select>
         <br><br><input type='submit' style=' text-align:center; font-size:medium ; color:aliceblue ; background-color: #4472C4; border: 0.5pt ridge #101B2E; float: center;' value='Fatura Çıktısı Al'></form><br><br>";
 ?>
 
