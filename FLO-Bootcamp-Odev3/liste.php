@@ -18,11 +18,10 @@ $baglan = baglan();
 
 $sorgu = $baglan->prepare("select * from rehber1");
 $sorgu->execute();
-$sorgusayac = $sorgu->rowCount();
+$toplamsatir = $sorgu->rowCount();
 
 
-var_dump($toplamsatir);
-echo "<table width='100%' border='1'>
+echo "<table width='80%' border='1' style='border:1px solid black; margin-left:auto;margin-right:auto;'>
     <tr align='center'>
         <td width = '55%'><b>Adı Soyadı</b></td>
         <td width = '35%'><b>Telefon Numarası</b></td>

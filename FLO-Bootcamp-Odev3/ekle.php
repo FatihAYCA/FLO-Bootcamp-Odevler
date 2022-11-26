@@ -1,31 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Ana Sayfa - Veritabanı Uygulaması</title>
-    </head>
-<body>
-    <div style="text-align:center;">
-    <a href="index.php">YENİ KAYIT</a> - <a href="liste.php">REHBER</a>
-    </div>
-
-    <br><br>
-
-</body>
-</html>
-
 <?php
-
 error_reporting(0);
-
 require_once 'baglan.php';
 $baglan = baglan();
 
+$telefonkarakter = strlen(str_replace(" ","",$_POST["telefon"]));
+if ($telefonkarakter != 11) {
+    echo "<script>
+    alert('Bilgiler Geçersiz!');
+    window.top.location = 'index.php';
+    </script>";
+    die();
+}
+
 if (isset($_POST["adsoyad"], $_POST["telefon"])) {
-    $adsoyad = $_POST["adsoyad"]; // FORMDAN GELEN BİLGİLERİ ÇEKTİM VERİTABANINA KAYDETMEK ÜZERE DEĞİŞKENE ATADIM
-    $telefon = $_POST["telefon"]; // FORMDAN GELEN BİLGİLERİ ÇEKTİM VERİTABANINA KAYDETMEK ÜZERE DEĞİŞKENE ATADIM
+    $adsoyad = $_POST["adsoyad"];
+    $telefon = $_POST["telefon"]; 
     $sorgu = $baglan->prepare('insert into rehber1 values(?,?,?)');
-    $ekle = $sorgu->execute(array(NULL,"$adsoyad","$telefon")); //VERİTABANINA FORMDAN GELEN BİLGİLERİ EKLEDİM
+    $ekle = $sorgu->execute(array(NULL,"$adsoyad","$telefon")); 
     echo "<script>
     alert('Kayıt Başarılı!');
     window.top.location = 'liste.php';
@@ -38,7 +29,6 @@ if (isset($_POST["adsoyad"], $_POST["telefon"])) {
     </script>";
     die();
 }
-
 
 ?>
 
