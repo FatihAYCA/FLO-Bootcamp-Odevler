@@ -9,5 +9,6 @@
 ### 4 - Veritabanından bilgilerimi alıp ekranda tablo halinde listeledim.
 
 
+![odev3](https://user-images.githubusercontent.com/110502174/204066119-d4cc9281-b8a6-4f5c-820b-7ef0cfd59d7e.gif)
 
 
