@@ -1,5 +1,4 @@
 <?php
-
 class dogrulama
 {
     function islem1($a)
@@ -15,6 +14,5 @@ class dogrulama
             }
         }
 }
-
 ?>
 
