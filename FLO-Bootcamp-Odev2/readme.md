@@ -9,5 +9,4 @@
 ### 4 - Sepetteki ürünleri kaldırmak için unset kullanarak session'daki verileri yokettim.
 
 
-
-
+![odev2](https://user-images.githubusercontent.com/110502174/204066918-5a7bfa78-8ec4-42f8-a489-47b5c0ea6f6c.gif)
