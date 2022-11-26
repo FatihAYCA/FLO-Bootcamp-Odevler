@@ -2,17 +2,17 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Rehber - Yeni Kayıt</title>
+        <title>TC Doğrulama</title>
     </head>
 <body>
     <h1 style=' text-align:center'>Doğrulama</h1>
-   
+
 <form action="ekle.php" method="post" style="text-align:center;">
     <strong>Ad Soyad:</strong><br>
      <input type="text" name="adsoyad" value="" size="30" required>
     <br><br>
     <strong>TC Kimlik Numarası:</strong> <br>
-    <input type="value" name="tc" value="" size="30" required>
+    <input type="number" name="tc" value="" size="30" required>
     <br><br>
     <input type='submit' style=' text-align:center; font-size:medium ; color:aliceblue ; background-color: #4472C4; border: 0.5pt ridge #101B2E; float: center;' value='Doğrula ve Kaydet'>
 </form>
@@ -32,7 +32,6 @@ echo "<table width='100%' border='1'>
 <td width = '35%'><b>Durum</b></td>
 </tr>";
 
-
 while ($satir = $sorgu->fetchObject()){
     echo "<tr align='center'>
     <td>$satir->id</td>
@@ -43,7 +42,6 @@ while ($satir = $sorgu->fetchObject()){
 }
 
 ?>
-
 
 </body>
 </html>

@@ -3,6 +3,14 @@ require_once 'baglan.php';
 include 'myclass.php';
 $baglan = baglan();
 
+// if ($_POST["tc"] != 11) {
+//     echo "<script>
+//     alert('Bilgiler Geçersiz!');
+//     window.top.location = 'index.php';
+//     </script>";
+//     die();
+// }
+
 $adsoyad = $_POST["adsoyad"]; 
 $tc = $_POST["tc"];
 
