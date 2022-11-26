@@ -1,7 +1,6 @@
 <?php
 session_start();
 error_reporting(0);
-
 $adetler = array();
 for ($i=0; $i < 3; $i++) { 
     if ($_POST["urun$i"] > 0) {

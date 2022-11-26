@@ -8,7 +8,6 @@
     <div style="text-align:center;">
     <a href="index.php">YENİ KAYIT</a> - <a href="liste.php">KAYIT LİSTESİ</a>
     </div>
-
     <h1 style=' text-align:center'>Kayıt Listesi</h1>
 
 <?php
@@ -19,7 +18,6 @@ $baglan = baglan();
 $sorgu = $baglan->prepare("select * from rehber1");
 $sorgu->execute();
 $toplamsatir = $sorgu->rowCount();
-
 
 echo "<table width='80%' border='1' style='border:1px solid black; margin-left:auto;margin-right:auto;'>
     <tr align='center'>

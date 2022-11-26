@@ -9,14 +9,14 @@
 <body >
 
 <?php
-session_start();
 error_reporting(0);
+session_start();
 $bilgiler = array("Ülker Çikolatalı Gofret 40 gr.","Eti Damak Kare Çikolata 60 gr.","Nestle Bitter Çikolata 50 gr.");
 $fiyatlar = array("10","20","20");
 $sayac = 0;
 
-echo "<form method='post' action='sepet.php'>
-    <table border='1' width='100%'>
+echo "<form method='post' action='sepet.php' style='text-align:center;'>
+    <table border='1' width='75%' style='border:1px solid black; margin-left:auto;margin-right:auto;'>
       <tr>
       <td><b>Ürün Adı</b></td>
       <td style='text-align:center'><b>Ürün Fiyatı</b></td>
@@ -31,11 +31,10 @@ echo "<form method='post' action='sepet.php'>
                 </tr>";
         $sayac++;
         }
-
       echo "</table>";
 ?>
 <br>
-<input type='submit' style=' text-align:center; font-size:medium ; color:aliceblue ; background-color: #4472C4; border: 0.5pt ridge #101B2E; float: right;' value='Ürünü Sepete Ekle'>
+<input type='submit' style='text-align:center; font-size:medium ; color:aliceblue ; background-color: #4472C4; border: 0.5pt ridge #101B2E;' value='Ürünü Sepete Ekle'>
 </form>
 <br>
 <?php
@@ -46,12 +45,12 @@ for ($j=0; $j < 3; $j++) {
 }
 
 if ($adetler1[0] == "" && $adetler1[1] == "" && $adetler1[2] == "") {
-    echo "<b>Sepetiniz Boş</b>";
+    echo "<b><div style='text-align:center;'>Sepetiniz Boş</b></div>";
 } else {
-    echo "<br><b>Sepetiniz:</b><br><br>";
     $sayac2 = 0;
     echo "
-        <table border='1' width=100%>
+        <table border='1' width='75%' style='border:1px solid black; margin-left:auto;margin-right:auto;'>
+        <tr><td colspan='3' style='text-align:center;'><b>Sepetiniz</b></td></tr>
         <tr>
             <td><b>Ürün Adı</b></td>
             <td style='text-align:center'> <b>Adet</b></td>
@@ -68,23 +67,17 @@ if ($adetler1[0] == "" && $adetler1[1] == "" && $adetler1[2] == "") {
                 }
             }
             $toplamfiyat = $toplam[0] + $toplam[1] + $toplam[2];
-    
             if ($toplamfiyat > 0) {
             echo "<tr>
             <td colspan='2'>Genel Toplam</td>
             <td style='text-align:center'>$toplamfiyat TL.</td>
             </tr>";
         }
-         echo "</table>
-         <br>
-         <form action='sepetisil.php' method='post'> 
-         <input type='submit' style=' text-align:center; font-size:medium ; color:aliceblue ; background-color: #4472C4; border: 0.5pt ridge #101B2E; float: right;' value='Sepetteki Ürünleri Kaldır'>
+         echo "</table><br>
+         <form action='sepetisil.php' method='post' style='text-align:center;'> 
+         <input type='submit' style=' text-align:center; font-size:medium ; color:aliceblue ; background-color: #4472C4; border: 0.5pt ridge #101B2E;' value='Sepetteki Ürünleri Kaldır'>
          </form>";
 }
-?> 
-<br><br><br>
-
-
-
+?>
 </body>
 </html>
