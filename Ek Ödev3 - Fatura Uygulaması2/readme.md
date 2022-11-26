@@ -8,4 +8,5 @@
 ### 3 - Elde ettiğim bilgilerle birlikte fatura çıktısı oluşturdum.
 
 
+![ekodev3](https://user-images.githubusercontent.com/110502174/204065178-ee09ebd7-04f0-4247-9964-d07a2801c686.gif)
 
