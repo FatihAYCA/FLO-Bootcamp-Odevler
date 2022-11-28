@@ -1,7 +1,6 @@
 <?php
-class dogrulama
-{
-    function islem1($a)
+class dogrulama {
+    public function islem1($a)
         {
             if (strlen($a) == 11 
             && ctype_digit($a) 
