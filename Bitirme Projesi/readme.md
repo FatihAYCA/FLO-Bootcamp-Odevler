@@ -168,3 +168,13 @@
 ### ↑↑↑
 ### Arama -> Arama kısmında bulunduğumuz sayfada form ile birlikte arama metnini aldım, veritabanını gelen arama metnine göre filtreledim ve tekrar aynı sayfada listeledim.
 <br>
+
+<div align="center"> 
+  <img src="https://user-images.githubusercontent.com/110502174/205420632-e66db851-540c-4257-ac60-f41105e8eb58.png" />
+</div>
+
+### ↑↑↑
+### Toplam sayılara ulaşmak için veritabanında toplam sayıya ulaşmak istediğim tablo içerisindeki satırları saydırdım.
+<br>
+
+
