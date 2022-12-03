@@ -77,7 +77,7 @@ if ($_GET["id"] == "bursiyer") {
 
         $file = fopen('php://memory', 'w'); 
 
-        $baslik = array('ID','AD','SOYAD','TELEFON','MAIL','BAĞIŞ(TL)'); 
+        $baslik = array('ID','AD','SOYAD','TELEFON','MAIL','NEDEN'); 
         fputcsv($file, $baslik, $ayrac); 
 
             while($satir = $sorgu->fetchObject()){ 

@@ -30,7 +30,7 @@ while ($satir = $sorgu->fetchObject()){
     $toplambagis += $satir->bagis;
 }
 
-//Bursveren -- bursiyer -- ileti kayıt
+//Bursveren -- bursiyer -- burs başvuru - ileti kayıt
 if ($_POST["bagismiktar"] != "") {
         $sorgu = $baglan->prepare('insert into bursveren values(?,?,?,?,?,?)');
         $ekle = $sorgu->execute(array(NULL,"$ad","$soyad","$telefon","$mail","$bagismiktar"));
