@@ -10,7 +10,7 @@
 ##  Proje Hakkında
 
 ### 1) Ön yüz sayfasında burs başvurusu yapabilir, öneri ve şikayette bulunabilirsiniz
-### 2) Admin paneline ulaşmak için giriş yapılması gerekmektedir.
+### 2) Admin paneline ulaşmak için giriş yapılması gerekmektedir. (username: fatih , password: 1234)
 ### 3) Admin paneli 7 sayfadan oluşmaktadır.
 ### 4) Anasayfadan bütün tablolara erişebilirsiniz.
 ### 5) Burs Başvuru Takip Panelinden burs başvurularına erişebilir, başvuruları kabul edebilir ya da reddedebilirsiniz.
