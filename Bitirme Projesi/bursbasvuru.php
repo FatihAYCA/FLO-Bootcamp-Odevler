@@ -153,7 +153,7 @@ $verilecekburs = $_SESSION["verilecekburs"];
                   <label class="col-sm-2 col-form-label">Burs Miktarını Belirle</label>
                   <div class="col-sm-10">
                     <button type="submit" class="btn btn-primary">Kaydet</button>
-                    <label class="alert alert-primary alert-dismissible fade show">
+                    <label style="float:right" class="alert alert-primary alert-dismissible fade show">
 
                          <?php
                         if (isset($verilecekburs)) {
