@@ -237,6 +237,57 @@ $kasa = $toplambagis - $toplamburs;
                 });
               </script>
 
+      </div></section>
+
+      <br><br>
+
+      
+    <div class="card" style="width:35%">
+            <div class="card-body">
+              <h5 class="card-title">Manuel Kasa Kalan Miktar Hesabı</h5>
+                <div class="col-md-6">
+                  <label class="form-label">Toplam Bağış Miktarı
+                  <input type="email" class="form-control" id="toplamalinanbagis"></label>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword5" class="form-label">Toplam Verilen Burs Miktarı
+                  <input type="text" class="form-control" id="toplamverilenburs"></label>
+                </div>
+                <label><button type="submit" class="btn btn-primary">Kalan Para Hesapla</button></label><br>
+                <div class="col-md-6">
+                 
+                </div><br><div>Kasa Kalan Para(TL) :</div>
+                <div class="alert alert-primary alert-dismissible fade show" style="width:50%" id="sonuc">
+              </div>
+                <div class="col-12">
+                </div>
+            </div>
+          </div>
+
+          <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+          <script>
+
+              $(document).ready(function(){
+                  $("button").click(function(){
+
+                      $.ajax({
+                          cache:false,
+                          type: "POST",
+                          url:"ajax.php",
+                          data: "toplamalinanbagis=" + $("#toplamalinanbagis").val() + "&toplamverilenburs=" + $("#toplamverilenburs").val(),
+                          success: function(result){
+                              $("#sonuc").html(result);
+                          },
+                          error: function(xhr){
+                              $("#sonuc").html("Hata: "+xhr.status + " "+xhr.statusText);
+                          }
+                      })
+                  });
+              });
+
+          </script>
+
 
   </main>
 
