@@ -181,4 +181,11 @@
 ### Toplam sayılara ulaşmak için veritabanında toplam sayıya ulaşmak istediğim tablo içerisindeki satırları saydırdım.
 <br>
 
+<div align="center"> 
+  <img src="https://user-images.githubusercontent.com/110502174/205439840-af887264-febf-4e0f-8d0b-75ed1d67ada4.png" />
+</div>
+
+### ↑↑↑
+### AJAX Metodunu kullanarak manuel kasada kalan para miktarını hesapladım.
+<br>
 
