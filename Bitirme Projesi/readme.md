@@ -4,7 +4,7 @@
 
 <div align="center">
 
-  <img src="https://user-images.githubusercontent.com/110502174/205400731-da23a22a-7065-4b76-b58b-a983745a7e65.png" width="400" height="auto" />
+  <img src="https://user-images.githubusercontent.com/110502174/205400731-da23a22a-7065-4b76-b58b-a983745a7e65.png" width="560" height="auto" />
   <h1>TekBurs - Teknoloji Bursu</h1>
   
   <p>
