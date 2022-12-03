@@ -14,12 +14,12 @@
 ##  Proje Hakkında
 
 ### 1) Ön yüz sayfasında burs başvurusu yapabilir, öneri ve şikayette bulunabilirsiniz
-### 2) Admin paneline ulaşmak için giriş yapılması gerekmektedir. (username: fatih , password: 1234)
+### 2) Admin paneline ulaşmak için giriş yapılması gerekmektedir. (SESSION) (username: fatih , password: 1234)
 ### 3) Admin paneli 7 sayfadan oluşmaktadır.
 ### 4) Anasayfadan bütün tablolara erişebilirsiniz.
-### 5) Burs Başvuru Takip Panelinden burs başvurularına erişebilir, başvuruları kabul edebilir ya da reddedebilirsiniz.
-### 6) Burs Veren Takip Panelinden burs veren bilgilerine ulaşabilir, burs veren ekleyebilir ya da silebilirsiniz.
-### 7) Bursiyer Takip Panelinden bursiyer bilgilerine ulaşabilir, bursiyer ekleyebilir ya da silebilirsiniz.
+### 5) Burs Başvuru Takip Panelinden burs başvurularına erişebilir, başvuruları kabul edebilir, reddedebilir ya da verileri csv olarak indirebilirsiniz.
+### 6) Burs Veren Takip Panelinden burs veren bilgilerine ulaşabilir, burs veren ekleyebilir, silebilir ya da verileri csv olarak indirebilirsiniz.
+### 7) Bursiyer Takip Panelinden bursiyer bilgilerine ulaşabilir, bursiyer ekleyebilir, silebilir ya da verileri csv olarak indirebilirsiniz.
 ### 8) Kasa Yönetim Panelinden toplam bağış, toplam verilen burs ve kasada kalan para miktarına ulaşabilirsiniz, dilerseniz manuel kasa hesabı yapabilirsiniz(AJAX).
 ### 9) Bize Ulaşın panelinden gelen öneri ve şikayetlere ulaşabilir isterseniz silebilirsiniz.
 ### 10) Çıkış Yap butonuna tıklarsanız oturumdaki giriş bilginiz silinir ve ön yüz sayfasına yönlendirilirsiniz.  
