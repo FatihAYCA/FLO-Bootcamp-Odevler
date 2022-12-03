@@ -25,6 +25,12 @@
 ### 10) Çıkış Yap butonuna tıklarsanız oturumdaki giriş bilginiz silinir ve ön yüz sayfasına yönlendirilirsiniz.  
 <br>
   
+  
+
+https://user-images.githubusercontent.com/110502174/205445271-aae47c7c-218a-404d-866e-fcf98cdf5871.mp4
+
+
+  
 # :camera: AÇIKLAMALAR :camera:
 
 
