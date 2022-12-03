@@ -1,6 +1,6 @@
 
-![flobootcamp](https://user-images.githubusercontent.com/110502174/205436665-4612090a-86fe-475b-84d3-63e71b1171f1.png)
 
+<img src="https://user-images.githubusercontent.com/110502174/205436665-4612090a-86fe-475b-84d3-63e71b1171f1.png" width="100%" height="auto" />
 
 <div align="center">
 
