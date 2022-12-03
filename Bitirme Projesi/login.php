@@ -41,7 +41,7 @@
               <div class="d-flex justify-content-center py-4">
                 <a href="index.php" class="logo d-flex align-items-center w-auto">
                   <img src="assets/img/logo.png" alt="">
-                  <h5 class="card-title"><span> TekBurs</span> Teknoloji Bursu </h5>
+                  <h5 class="card-title"><span> TekBurs</span> | Teknoloji Bursu </h5>
                 </a>
               </div>
 

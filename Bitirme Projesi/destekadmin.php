@@ -51,7 +51,7 @@ if ($_SESSION["giris"] != "var") {
     <div class="d-flex align-items-center justify-content-between">
       <a href="anasayfa.php" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <h5 class="card-title"><span> TekBurs</span> Teknoloji Bursu </h5>
+        <h5 class="card-title"><span> TekBurs</span> | Teknoloji Bursu </h5>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div>
