@@ -2,9 +2,13 @@
 
 //Bağlan fonksiyonu
     function baglan() {
-      $baglan=new PDO("mysql:host=localhost;dbname=burstakip;charset=utf8","root","");
-      $baglan->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      $baglan->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+        try {
+        $baglan=new PDO("mysql:host=localhost;dbname=burstakip;charset=utf8","root","");
+        $baglan->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $baglan->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+       } catch (PDOException $e) {
+        echo "Bağlantı Hata : $e->getMessage()";
+       }
       return $baglan;
     }
 
