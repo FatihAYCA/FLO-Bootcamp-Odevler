@@ -20,7 +20,7 @@
 ### 5) Burs Başvuru Takip Panelinden burs başvurularına erişebilir, başvuruları kabul edebilir ya da reddedebilirsiniz.
 ### 6) Burs Veren Takip Panelinden burs veren bilgilerine ulaşabilir, burs veren ekleyebilir ya da silebilirsiniz.
 ### 7) Bursiyer Takip Panelinden bursiyer bilgilerine ulaşabilir, bursiyer ekleyebilir ya da silebilirsiniz.
-### 8) Kasa Yönetim Panelinden toplam bağış, toplam verilen burs ve kasada kalan para miktarına ulaşabilirsiniz.
+### 8) Kasa Yönetim Panelinden toplam bağış, toplam verilen burs ve kasada kalan para miktarına ulaşabilirsiniz, dilerseniz manuel kasa hesabı yapabilirsiniz(AJAX).
 ### 9) Bize Ulaşın panelinden gelen öneri ve şikayetlere ulaşabilir isterseniz silebilirsiniz.
 ### 10) Çıkış Yap butonuna tıklarsanız oturumdaki giriş bilginiz silinir ve ön yüz sayfasına yönlendirilirsiniz.  
 <br>
