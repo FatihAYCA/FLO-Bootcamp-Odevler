@@ -142,6 +142,7 @@ if ($_SESSION["giris"] != "var") {
                     <th scope="col">Soyad</th>
                     <th scope="col">Mail</th>
                     <th scope="col">İleti</th>
+                    <th scope="col">İşlem</th>
                   </tr>
                 </thead>
                 <tbody>
