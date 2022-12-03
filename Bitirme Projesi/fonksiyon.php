@@ -74,7 +74,7 @@
       }
 
 
-      //Toplam bağış hesabı
+      //Toplam bağış hesabı - bursveren veritabanındaki bağışları topladım
       $sorgu = $baglan->prepare("select * from bursveren");
       $sorgu->execute();
       $toplambagis = 0;
@@ -84,6 +84,7 @@
 
 
       //Basvuru kabul etme-silme
+      //Başvuruyu kabul edince kabul edilen başvuruyu bursiyer veritabanına ekledim, başvuranlar veritabanından sildim
       if ($_GET["islem"] == "sil") {
         $id = $_GET["id"];
         $baglan = baglan();
