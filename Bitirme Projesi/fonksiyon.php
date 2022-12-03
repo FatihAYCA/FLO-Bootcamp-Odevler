@@ -1,17 +1,23 @@
 <?php
 
 //Bağlan fonksiyonu
-    function baglan() {
-        try {
+    // function baglan() {
+    //     try {
+    //     $baglan=new PDO("mysql:host=localhost;dbname=burstakip;charset=utf8","root","");
+    //     $baglan->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //     $baglan->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    //    } catch (PDOException $e) {
+    //     echo "Bağlantı Hata : $e->getMessage()";
+    //    }
+    //   return $baglan;
+    // }
+
+        function baglan() {
         $baglan=new PDO("mysql:host=localhost;dbname=burstakip;charset=utf8","root","");
         $baglan->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $baglan->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-       } catch (PDOException $e) {
-        echo "Bağlantı Hata : $e->getMessage()";
-       }
-      return $baglan;
+        return $baglan;
     }
-
 
     //Class yapısı
     class bursTakip {

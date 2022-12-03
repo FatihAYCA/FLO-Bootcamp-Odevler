@@ -4,25 +4,25 @@ include_once 'fonksiyon.php';
 $baglan = baglan();
 
 if ($_GET["id"] == "bursiyer") {
-    $sorgu = $baglan->prepare("select * from bursiyer");
+    $sorgu = $baglan->prepare("select * from bursiyer order by id asc");
     $sorgu->execute();
 
     if($sorgu->rowCount() > 0){
         $ayrac = ","; 
-        $dosyaadi = "Bursiyer Veri " . ".csv"; 
+        $dosyaadi = "Bursiyer " . ".csv"; 
 
         $file = fopen('php://memory', 'w'); 
 
-        $baslik = array('ID','AD','SOYAD','TELEFON','MAIL','BURS(TL)'); 
+        $baslik = array('ID','AD','SOYAD','TELEFON','MAIL','BURS'); 
         fputcsv($file, $baslik, $ayrac); 
 
             while($satir = $sorgu->fetchObject()){ 
                  $lineData = array($satir->id, $satir->ad, $satir->soyad, $satir->telefon, $satir->mail, $satir->burs); 
 
-            fputcsv($file, $lineData, $ayrac);
+        fputcsv($file, $lineData, $ayrac);
     }
 
-    fseek($ile, 0);
+    fseek($file, 0);
 
     header('Content-Type: text/csv; charset=utf-8');
     header('Content-Disposition: attachment; filename="' . $dosyaadi . '";');
@@ -36,7 +36,7 @@ if ($_GET["id"] == "bursiyer") {
     }
     exit;
 } elseif ($_GET["id"] == "bursveren") {
-    $sorgu = $baglan->prepare("select * from bursveren");
+    $sorgu = $baglan->prepare("select * from bursveren order by id asc");
     $sorgu->execute();
 
     if($sorgu->rowCount() > 0){
@@ -68,7 +68,7 @@ if ($_GET["id"] == "bursiyer") {
     }
     exit;
 } elseif ($_GET["id"] == "bursbasvuru") {
-    $sorgu = $baglan->prepare("select * from bursbasvuru");
+    $sorgu = $baglan->prepare("select * from bursbasvuru order by id asc");
     $sorgu->execute();
 
     if($sorgu->rowCount() > 0){
