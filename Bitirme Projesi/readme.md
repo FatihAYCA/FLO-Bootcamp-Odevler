@@ -1,3 +1,7 @@
+
+
+<img src="https://user-images.githubusercontent.com/110502174/205436665-4612090a-86fe-475b-84d3-63e71b1171f1.png" width="100%" height="auto" />
+
 <div align="center">
 
   <img src="https://user-images.githubusercontent.com/110502174/205400731-da23a22a-7065-4b76-b58b-a983745a7e65.png" width="400" height="auto" />
@@ -10,7 +14,7 @@
 ##  Proje Hakkında
 
 ### 1) Ön yüz sayfasında burs başvurusu yapabilir, öneri ve şikayette bulunabilirsiniz
-### 2) Admin paneline ulaşmak için giriş yapılması gerekmektedir.
+### 2) Admin paneline ulaşmak için giriş yapılması gerekmektedir. (username: fatih , password: 1234)
 ### 3) Admin paneli 7 sayfadan oluşmaktadır.
 ### 4) Anasayfadan bütün tablolara erişebilirsiniz.
 ### 5) Burs Başvuru Takip Panelinden burs başvurularına erişebilir, başvuruları kabul edebilir ya da reddedebilirsiniz.
